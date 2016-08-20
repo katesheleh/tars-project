@@ -1,0 +1,23 @@
+// Common styles of the project
+
+html, body {
+	min-width: 320px;
+  margin: 0;
+  font-family: $ptsans;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  background-color: #FFF;
+}
+
+
+.page__wrapper {
+    min-height: 100%;
+}
+
+.container {
+	max-width: 960px;
+  padding: 0 10px;
+	margin: 0 auto;
+	@include cf;
+}

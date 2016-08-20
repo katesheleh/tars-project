@@ -1,0 +1,11 @@
+mixin language(data)
+	ul.language
+		each item in data
+			li.language__item
+				
+				if item.country
+					span.language__country= item.country
+					a.language__link(href= item.link)= item.name
+
+				else
+					a.language__link(href= item.link)= item.name

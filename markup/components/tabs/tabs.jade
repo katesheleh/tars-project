@@ -1,0 +1,32 @@
+include ../../components/logo/logo
+include ../../components/search/search
+include ../../components/slider/slider
+
+mixin tabs(data)
+	section.tabs
+		.tabs__row
+			.container
+				+logo()
+
+				+search()
+
+				ul.tabs__menu.js-tab-menu
+					li.tabs__item
+						a.tabs__link.js-tab-nav.active(href= "#tab1") Возможности
+					li.tabs__item
+						a.tabs__link.js-tab-nav(href= "#tab2") Информация
+					li.tabs__item
+						a.tabs__link.js-tab-nav(href= "#tab3") Привилегии
+
+				
+
+		.tabs__content
+			.tabs__section.js-tab-section.active(id="tab1")
+				+slider()
+			.tabs__section.js-tab-section(id="tab2")
+				+publicity()
+			.tabs__section.js-tab-section(id="tab3")
+				+publicity()
+				
+
+

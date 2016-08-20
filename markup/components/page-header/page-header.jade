@@ -1,0 +1,8 @@
+include ../../components/language/language 
+include ../../components/info/info 
+
+mixin page-header(data)
+	header.page-header
+		.container
+			+language(language.itemData)
+			+info()

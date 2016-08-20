@@ -1,0 +1,27 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../components/head/head
+    include ../components/page-header/page-header    
+    include ../components/page-content/page-content
+    include ../components/page-footer/page-footer
+
+    head
+        +head(head.defaults)
+    body.page
+        |%=symbols=%
+
+        .page__wrapper
+
+            //- Include your components here
+            +page-header()                
+
+            +page-content()
+
+            +page-footer()    
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js")
+        script(src='%=static=%js/separate-js/svg4everybody.min.js')
+        script svg4everybody();
+
+        //- Main scripts. You can replace it, but I recommend you to leave it here
+        script(src='%=static=%js/main%=hash=%%=min=%.js')

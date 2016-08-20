@@ -1,0 +1,21 @@
+.logo {
+	width: 232px;
+	display: block;
+	float: left;
+	margin: 11px 78px 0 0;
+}
+
+
+@include mq(tablet) {
+	.logo {
+		float: none;		
+		margin: 30px auto 20px auto;
+	}
+}
+
+
+@include mq(mobile) {
+	.logo {
+		margin: 15px auto 10px auto;
+	}
+}

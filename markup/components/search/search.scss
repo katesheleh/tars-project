@@ -1,0 +1,53 @@
+.search {
+	position: relative;
+	margin-top: 17px;
+	float: right;
+	width: 250px;
+	height: 32px;
+	border: 1px solid #c8c8c8;
+	box-sizing: border-box;
+
+	&__field {		
+		width: 85%;
+		height: 100%;
+		border: none;
+		outline: none;
+		padding: 0 0 0 10px;
+		-webkit-appearance: none !important; // for safari bug
+    -webkit-border-radius: 0;
+            border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+
+    &[type="search"] {
+    	box-sizing: border-box;
+    }
+	}
+
+	&__btn {
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		margin-top: -10px;
+		@include bg-svg($search);
+		outline: none;
+		border: none;
+		background-color: #FFF;
+	}
+}
+
+
+@include mq(tablet) {
+	.search {
+		width: 100%;
+		height: 50px;
+
+		&__btn {
+			top: 50%;
+			margin-top: -10px;
+		}
+	}
+}
